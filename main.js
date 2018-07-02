@@ -22,3 +22,11 @@ fahrenheitInput.addEventListener('input', function(){
    celciusInput.value = celciusTemperature;
    kelvinInput.value = kelvinTemperature;
 });
+
+kelvinInput.addEventListener('input', function(){
+   const kelvinTemperature = parseFloat(kelvinInput.value);
+   const celciusTemperature = kelvinTemperature - 273.15;
+   const fahrenheitTemperature = 1.8 * (kelvinTemperature - 273) + 32;
+   celciusInput.value = celciusTemperature;
+   fahrenheitInput.value = fahrenheitTemperature;
+});
